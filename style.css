@@ -5,8 +5,11 @@
 }
 
 :root {
-    --primary: #2563eb;
-    --primary-dark: #1e40af;
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --secondary: #ec4899;
+    --accent: #14b8a6;
+    --warm: #f97316;
     --text: #1f2937;
     --text-light: #6b7280;
     --bg: #ffffff;
@@ -18,6 +21,8 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     color: var(--text);
     line-height: 1.6;
+    background: linear-gradient(135deg, #f0f9ff 0%, #fdf2f8 50%, #fef3c7 100%);
+    background-attachment: fixed;
 }
 
 .container {
@@ -28,10 +33,12 @@ body {
 
 /* Navigation */
 .nav {
-    position: sticky;
-    top: 0;
-    background: rgba(255, 255, 255, 0.95);
+    position: stlinear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 250, 250, 0.95) 100%);
     backdrop-filter: blur(10px);
+    border-bottom: 2px solid;
+    border-image: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent)) 1;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05)ter: blur(10px);
     border-bottom: 1px solid var(--border);
     z-index: 100;
 }
@@ -42,8 +49,16 @@ body {
     align-items: center;
     padding: 1rem 1.5rem;
 }
+background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
 
-.logo {
+.logo:hover {
+    transform: scale(1.1)
     font-size: 1.5rem;
     font-weight: 800;
     color: var(--primary);
@@ -61,12 +76,91 @@ body {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
+}6366f1 0%, #ec4899 25%, #14b8a6 50%, #f97316 75%, #6366f1 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+    color: white;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.8s ease-out;
+}#fbbf24;
+    font-weight: 900;
+    text-shadow: 0 2px 10px rgba(251, 191, 36, 0.4
+
+@keyframes slideUp {
+    from {white;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.8s ease-out 0.1s both
+        trargba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+    animation: slideUp 0.8s ease-out 0.2s bothnslateY(0);
+    }
+
+.hero::before {linear-gradient(135deg, #fbbf24, #f97316);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s;
+    position: relative;
+    z-index: 1;
+    animation: slideUp 0.8s ease-out 0.3s both;
+    box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3)radient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    top: -100px;linear-gradient(135deg, #f97316, #fbbf24);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(249, 115, 22, 0.4
 }
 
-.nav-menu a:hover {
-    color: var(--primary);
+.hero::after {
+    content: '';
+    position: absolute;
+    position: relative;
 }
 
+.section.alt {
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.05) 0%, rgba(20, 184, 166, 0.05) 100%
+    bottom: -50px;
+    left: -50px;
+    animation: float 25s ease-in-out infinite reverse;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+    border-radius: 2px;
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
 /* Hero */
 .hero {
     min-height: 100vh;
@@ -77,17 +171,20 @@ body {
 }
 
 .hero h1 {
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    margin-bottom: 1rem;
-}
-
-.highlight {
-    color: var(--primary);
-}
-
-.subtitle {
-    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-size: 75rem 1.5rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));
+    border: 2px solid;
+    border-image: linear-gradient(135deg, var(--primary), var(--secondary)) 1;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all 0.3s;
     color: var(--text);
+}
+
+.skill:hover {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(236, 72, 153, 0.2));
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.2
     margin-bottom: 1rem;
 }
 
@@ -97,30 +194,63 @@ body {
     margin-bottom: 2rem;
     max-width: 600px;
     margin-left: auto;
-    margin-right: auto;
+    margin-rightlinear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 250, 250, 0.95));
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid;
+    border-image: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent)) 1;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
 }
 
-.btn {
-    display: inline-block;
-    padding: 0.875rem 2rem;
-    background: var(--primary);
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    z-index: 1
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.project-card:hover::before {
+    left: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.25
     font-weight: 600;
     transition: all 0.3s;
 }
 
 .btn:hover {
     background: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
-}
-
+    transform: 35rem 0.85rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    opacity: 0.9
 /* Sections */
 .section {
     padding: 4rem 0;
 }
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+.project-link:hover {
+    color: var(--secondary);
+    transform: translateX(5px);
 
 .section.alt {
     background: var(--bg-alt);
@@ -130,21 +260,27 @@ body {
     font-size: clamp(2rem, 4vw, 2.5rem);
     text-align: center;
     margin-bottom: 3rem;
-    position: relative;
-    padding-bottom: 1rem;
+    position: relativ;
+    border-image: linear-gradient(135deg, var(--primary), var(--secondary)) 1;
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 250, 250, 0.95));
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
 }
 
-.section h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 4px;
-    background: var(--primary);
-    border-radius: 2px;
-}
+.contact-link:hover {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3)
+    height: 4px;linear-gradient(135deg, var(--text) 0%, #374151 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    border-top: 2px solid;
+    border-image: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent)) 1
 
 /* About */
 .section p {
