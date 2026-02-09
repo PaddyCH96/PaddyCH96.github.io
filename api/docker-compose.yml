@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  llm-microservice:
+    build: .
+    container_name: llm-microservice
+    ports:
+      - "8000:8000"
+    environment:
+      - LLM_API_ENDPOINT=http://host.docker.internal:11434
+      - LLM_MODEL=llama2
+      - MAX_TOKENS=2048
+      - TEMPERATURE=0.7
+    restart: unless-stopped
+    networks:
+      - llm-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+
+networks:
+  llm-network:
+    driver: bridge
