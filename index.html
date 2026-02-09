@@ -14,6 +14,7 @@
             <ul class="nav-menu">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#ai-assistant">AI Assistant</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -63,6 +64,83 @@
                         <span>Node.js</span>
                     </div>
                     <a href="https://github.com/PaddyCH96" target="_blank" class="project-link">View on GitHub →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="ai-assistant">
+        <div class="container">
+            <h2>AI Assistant</h2>
+            <p class="section-intro">Chat with my AI-powered assistant. Ask questions about my work, skills, or anything tech-related!</p>
+            
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chat-status">
+                        <span class="status-indicator" id="statusIndicator"></span>
+                        <span id="statusText">Connecting...</span>
+                    </div>
+                    <button class="clear-chat-btn" id="clearChatBtn" title="Clear chat">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="3 6 5 6 21 6"></polyline>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="chat-messages" id="chatMessages">
+                    <div class="welcome-message">
+                        <div class="welcome-icon">🤖</div>
+                        <h3>Welcome to the AI Assistant!</h3>
+                        <p>I'm powered by a FastAPI microservice running on an edge server. Feel free to ask me anything!</p>
+                        <div class="suggested-prompts">
+                            <button class="prompt-btn" data-prompt="Tell me about your skills and experience">About your skills</button>
+                            <button class="prompt-btn" data-prompt="What projects have you worked on?">Your projects</button>
+                            <button class="prompt-btn" data-prompt="Explain how this AI assistant works">How does this work?</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-input-container">
+                    <div class="chat-input-wrapper">
+                        <textarea 
+                            id="chatInput" 
+                            class="chat-input" 
+                            placeholder="Type your message here..."
+                            rows="1"
+                        ></textarea>
+                        <button id="sendBtn" class="send-btn" title="Send message">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chat-info">
+                        <span class="info-text">Powered by FastAPI + LLM on Edge Server</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="api-info">
+                <h3>🔧 Technical Details</h3>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4>Backend</h4>
+                        <p>FastAPI microservice with async support</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>LLM Integration</h4>
+                        <p>OpenAI-compatible API endpoints</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>Deployment</h4>
+                        <p>Docker container on edge server</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>API Docs</h4>
+                        <p><a href="/api/README.md" target="_blank">View Documentation →</a></p>
+                    </div>
                 </div>
             </div>
         </div>
